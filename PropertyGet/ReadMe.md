@@ -17,26 +17,6 @@ The most generic possible way to achive this is ```T GetPropValue<T>(object inst
 | ExpressionTrees                        | 1     |        73.95 ns |      2.064 ns |      13.41 ns |        80.00 ns |                    - |                - |      22 B |
 | ExpressionTrees_FastExpressionCompiler | 1     |        78.92 ns |      1.901 ns |      12.11 ns |        80.00 ns |                    - |                - |      80 B |
 | EmitIL                                 | 1     |        98.00 ns |      1.886 ns |      11.79 ns |       100.00 ns |                    - |                - |      80 B |
-| Direct                                 | 1000  |     5,260.25 ns |     57.190 ns |     309.49 ns |     5,180.00 ns |                    - |                - |      80 B |
-| CreateDelegate                         | 1000  |    16,597.58 ns |    128.443 ns |     376.70 ns |    16,460.00 ns |                    - |                - |     331 B |
-| GetValue                               | 1000  |    25,399.57 ns |    786.622 ns |   3,618.41 ns |    25,800.00 ns |                    - |                - |   24080 B |
-| MakeGenericDelegate                    | 1000  |   220,530.07 ns |  2,526.323 ns |   8,724.10 ns |   217,880.00 ns |                    - |                - |   56998 B |
-| GenericDynamicInvoke                   | 1000  |   213,121.51 ns |  2,002.888 ns |   6,473.96 ns |   210,700.00 ns |                    - |                - |   56587 B |
-| MethodInfo                             | 1000  |    23,502.01 ns |    576.041 ns |   3,510.38 ns |    24,890.00 ns |                    - |                - |   24080 B |
-| YieldProperty                          | 1000  |    47,770.86 ns |    455.858 ns |   1,200.91 ns |    47,520.00 ns |                    - |                - |   64080 B |
-| ExpressionTrees                        | 1000  |     8,109.92 ns |     71.069 ns |     329.05 ns |     7,980.00 ns |                    - |                - |      80 B |
-| ExpressionTrees_FastExpressionCompiler | 1000  |     8,407.45 ns |     69.030 ns |     301.17 ns |     8,300.00 ns |                    - |                - |      80 B |
-| EmitIL                                 | 1000  |     8,718.76 ns |    123.195 ns |     533.57 ns |     8,520.00 ns |                    - |                - |      80 B |
-| Direct                                 | 10000 |     7,469.31 ns |     67.159 ns |     199.07 ns |     7,520.00 ns |                    - |                - |      80 B |
-| CreateDelegate                         | 10000 |    30,849.77 ns |    210.694 ns |     580.31 ns |    30,830.00 ns |                    - |                - |     331 B |
-| GetValue                               | 10000 |   134,416.32 ns |  1,093.447 ns |   4,165.24 ns |   132,260.00 ns |                    - |                - |  240080 B |
-| MakeGenericDelegate                    | 10000 | 1,767,190.75 ns | 96,671.915 ns | 592,766.78 ns | 1,348,440.00 ns |                    - |                - |  560998 B |
-| GenericDynamicInvoke                   | 10000 | 1,764,164.72 ns | 65,727.119 ns | 325,226.81 ns | 1,767,760.00 ns |                    - |                - |  560587 B |
-| MethodInfo                             | 10000 |   129,534.35 ns |  1,044.047 ns |   3,448.44 ns |   128,250.00 ns |                    - |                - |  240080 B |
-| YieldProperty                          | 10000 |   366,923.87 ns |  4,086.203 ns |  14,907.73 ns |   366,620.00 ns |                    - |                - |  640080 B |
-| ExpressionTrees                        | 10000 |    26,844.06 ns |    124.709 ns |     301.19 ns |    26,740.00 ns |                    - |                - |      80 B |
-| ExpressionTrees_FastExpressionCompiler | 10000 |    29,135.08 ns |    251.140 ns |     850.30 ns |    29,010.00 ns |                    - |                - |      80 B |
-| EmitIL                                 | 10000 |    33,488.31 ns |    148.368 ns |     346.80 ns |    33,360.00 ns |                    - |                - |      80 B |
 
 ## Direct
 
@@ -280,4 +260,3 @@ var getter = Emit<Func<object, int>>
 
 int value = getter(SubjectInstance);
 ```
-
