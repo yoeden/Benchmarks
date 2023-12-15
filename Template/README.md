@@ -5,7 +5,8 @@
  - 🤸 Flexability
  - ⏱️ Perfomance
  - 🛠️ Maintainability
- - 🛠️ Maintainability
+ - 👓 Readability
+ - 💾 Memory 
  - ✔️ Good
  - ❌ Bad
 

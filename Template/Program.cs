@@ -1,14 +1,18 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Columns;
+using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Reports;
 using BenchmarkDotNet.Running;
 
 var summary = BenchmarkRunner.Run<Bench>();
 
 [MemoryDiagnoser]
 [ThreadingDiagnoser]
+[Config(typeof(Config))]
 public class Bench
 {
-    [Benchmark]
-    public void First()
+    [Benchmark(Baseline = true)]
+    public void Baseline()
     {
 
     }
@@ -17,5 +21,13 @@ public class Bench
     public void Second()
     {
 
+    }
+}
+
+class Config : ManualConfig
+{
+    public Config()
+    {
+        SummaryStyle = SummaryStyle.Default.WithRatioStyle(RatioStyle.Percentage);
     }
 }
